@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fauzan Naufal Satria — Student & Tech Enthusiast</title>
+<meta name="description" content="Portfolio of Fauzan Naufal Satria (Zan) — a high school student in Indonesia learning computer networking, web development, AI, and cybersecurity by building real projects." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Latar belakang grid dan canvas -->
+<div class="bg-grid" aria-hidden="true"></div>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<!-- ============ NAVBAR ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#home" class="logo" aria-label="Home">
+      <span class="logo-mark">ZN</span>
+      <span class="logo-text">Zan<span class="logo-dot">.</span></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#journey" class="nav-link">Journey</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#contact" class="nav-cta">Let's Talk</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+
+      <div class="hero-copy">
+        <span class="badge reveal">
+          <span class="badge-pulse"></span>
+          Currently Learning &amp; Building
+        </span>
+
+        <h1 class="hero-title reveal" style="--d:.05s">
+          Hi, I'm <span class="accent">Zan</span>.
+        </h1>
+
+        <p class="hero-sub reveal" style="--d:.1s">Student &amp; Tech Enthusiast</p>
+
+        <p class="hero-desc reveal" style="--d:.15s">
+          I'm a high school student exploring computer networking, web development,
+          AI, and cybersecurity by building practical projects.
+        </p>
+
+        <div class="hero-actions reveal" style="--d:.2s">
+          <a href="#projects" class="btn btn-primary">
+            View My Projects
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+
+        <div class="hero-meta reveal" style="--d:.25s">
+          <div class="meta-item">
+            <span class="meta-key">Location</span>
+            <span class="meta-val">Indonesia</span>
+          </div>
+          <div class="meta-sep"></div>
+          <div class="meta-item">
+            <span class="meta-key">Focus</span>
+            <span class="meta-val">Networking &amp; AI CyberSecurity</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero visual: terminal + chat card -->
+      <div class="hero-visual reveal" style="--d:.2s">
+        <div class="visual-glow" aria-hidden="true"></div>
+
+        <div class="window">
+          <div class="window-bar">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+            <span class="window-title">nexora — bash</span>
+          </div>
+          <div class="window-body">
+            <p class="term-line">
+              <span class="t-user">zan@nexora</span><span class="t-dim">:</span><span class="t-path">~/projects/nexora-ai</span><span class="t-dim">$</span> npm start
+            </p>
+            <p class="term-line t-muted">&gt; starting NEXORA AI server…</p>
+            <p class="term-line t-muted">&gt; REST API listening on port 3000</p>
+            <p class="term-line t-muted">&gt; frontend ready — http://localhost:3000</p>
+            <p class="term-line">
+              <span class="t-user">zan@nexora</span><span class="t-dim">:</span><span class="t-path">~/projects/nexora-ai</span><span class="t-dim">$</span>
+              <span class="typed" id="typed"></span><span class="caret" aria-hidden="true"></span>
+            </p>
+          </div>
+        </div>
+
+        <div class="chat-card">
+          <div class="chat-head">
+            <span class="chat-dot"></span>
+            <span class="chat-name">NEXORA AI</span>
+            <span class="chat-status">online</span>
+          </div>
+          <div class="chat-body">
+            <div class="bubble bubble-user">How do I track network latency?</div>
+            <div class="bubble bubble-bot">Ping a target repeatedly, then plot round-trip time over time. Spikes usually mean congestion.</div>
+            <div class="typing" aria-label="NEXORA is typing">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">01 — About</span>
+        <h2 class="section-title">Learning by building, not by memorizing.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm Fauzan Naufal Satria — most people call me <strong>Zan</strong>. I'm a high school
+            student in Indonesia who got into technology the messy way: by trying things,
+            breaking them, and figuring out why they broke.
+          </p>
+          <p>
+            Instead of only watching tutorials, I build small projects to understand how things
+            actually work — a chatbot that talks to an API, a script that measures network
+            latency, a page that finally looks right after the tenth CSS rewrite. Each project
+            is a way to learn something concrete.
+          </p>
+          <p>
+            Right now I'm focused on <strong>computer networking</strong>, <strong>web
+            development</strong>, <strong>AI</strong>, and <strong>cybersecurity</strong> —
+            and I'm still at the beginning of that journey. That's the point.
+          </p>
+        </div>
+
+        <div class="about-cards">
+          <div class="info-card reveal" style="--d:.05s">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg>
+            </div>
+            <h3>Student</h3>
+            <p>High school, still learning the fundamentals.</p>
+          </div>
+
+          <div class="info-card reveal" style="--d:.1s">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </div>
+            <h3>Indonesia</h3>
+            <p>Building and experimenting from home.</p>
+          </div>
+
+          <div class="info-card reveal" style="--d:.15s">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M12 7.2 6.6 15.8"/><path d="M12 7.2l5.4 8.6"/><path d="M7.2 18h9.6"/></svg>
+            </div>
+            <h3>Networking</h3>
+            <p>Latency, packet loss, and connection quality.</p>
+          </div>
+
+          <div class="info-card reveal" style="--d:.2s">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6 8 8M18.4 5.6 16 8M5.6 18.4 8 16M18.4 18.4 16 16"/></svg>
+            </div>
+            <h3>AI &amp; Cybersecurity</h3>
+            <p>Exploring how intelligent and secure systems work.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">02 — Skills</span>
+        <h2 class="section-title">What I'm working with</h2>
+        <p class="section-sub">
+          Honest labels only — I'm a student, so everything here is somewhere between
+          "just started" and "comfortable with the basics".
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card reveal" style="--d:.05s">
+          <h3 class="skill-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 7 4 12 9 17"/><polyline points="15 7 20 12 15 17"/></svg>
+            Programming
+          </h3>
+          <ul class="skill-list">
+            <li class="skill-item"><span>HTML</span><span class="level level-inter">Intermediate</span></li>
+            <li class="skill-item"><span>CSS</span><span class="level level-inter">Intermediate</span></li>
+            <li class="skill-item"><span>JavaScript</span><span class="level level-begin">Beginner</span></li>
+            <li class="skill-item"><span>Python</span><span class="level level-begin">Beginner</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal" style="--d:.1s">
+          <h3 class="skill-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 20.5 7.5v9L12 21.5 3.5 16.5v-9z"/><path d="M12 12v9.5"/><path d="M12 12 3.5 7.5"/><path d="M12 12l8.5-4.5"/></svg>
+            Development
+          </h3>
+          <ul class="skill-list">
+            <li class="skill-item"><span>Node.js</span><span class="level level-begin">Beginner</span></li>
+            <li class="skill-item"><span>REST API</span><span class="level level-begin">Beginner</span></li>
+            <li class="skill-item"><span>Git</span><span class="level level-learn">Learning</span></li>
+            <li class="skill-item"><span>VS Code</span><span class="level level-inter">Intermediate</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal" style="--d:.15s">
+          <h3 class="skill-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M12 7.2 6.6 15.8"/><path d="M12 7.2l5.4 8.6"/><path d="M7.2 18h9.6"/></svg>
+            Technology
+          </h3>
+          <ul class="skill-list">
+            <li class="skill-item"><span>Computer Networking</span><span class="level level-learn">Learning</span></li>
+            <li class="skill-item"><span>Network Monitoring</span><span class="level level-begin">Beginner</span></li>
+          </ul>
+        </div>
+
+        <div class="skill-card reveal" style="--d:.2s">
+          <h3 class="skill-title">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="4.5"/></svg>
+            Areas of Interest
+          </h3>
+          <ul class="skill-list">
+            <li class="skill-item"><span>Artificial Intelligence</span><span class="level level-learn">Learning</span></li>
+            <li class="skill-item"><span>Cybersecurity</span><span class="level level-learn">Learning</span></li>
+            <li class="skill-item"><span>Web Development</span><span class="level level-inter">Intermediate</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">03 — Projects</span>
+        <h2 class="section-title">Things I've built to learn</h2>
+        <p class="section-sub">
+          Real projects, made to understand real concepts. Nothing here is a tutorial clone —
+          each one taught me something I didn't know before.
+        </p>
+      </div>
+
+      <!-- Featured Project: NEXORA AI -->
+      <article class="project-card featured-card reveal">
+        <div class="project-preview">
+          <div class="mock mock-ai">
+            <div class="mock-bar">
+              <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+              <span class="mock-title">NEXORA AI — chat</span>
+            </div>
+            <div class="mock-body">
+              <div class="msg msg-user">How can I help you build today?</div>
+              <div class="msg msg-bot">Explain how a REST API works.</div>
+              <div class="msg msg-typing"><span></span><span></span><span></span></div>
+            </div>
+            <div class="mock-input">
+              <span>Ask NEXORA anything…</span>
+              <span class="mock-send">↑</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-body">
+          <div class="project-header">
+            <span class="project-number">01 / NEXORA LABS</span>
+            <span class="status status-progress">In Progress</span>
+          </div>
+          <h3 class="project-title">NEXORA AI</h3>
+          <p class="project-desc">
+            An AI chatbot project with a web frontend, backend API, and AI integration.
+          </p>
+          <div class="tech-tags">
+            <span class="tag">JavaScript</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">API</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" class="project-link">
+              View Project
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="#" class="project-icon-link" aria-label="Source Code">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.2-4-2.2-5.5-2.7M15 21v-3.6a3.1 3.1 0 0 0-.9-2.4c3-.3 5.9-1.5 5.9-6.6a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6s-1.5-.5-4.5 1.7a11.6 11.6 0 0 0-6 0C5 1.7 3.5 2.2 3.5 2.2a4.8 4.8 0 0 0-.1 3.6A5.2 5.2 0 0 0 2 9.4c0 5.1 2.9 6.3 5.9 6.6a3.1 3.1 0 0 0-.9 2.4V21"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2: NEXORA Network Monitor -->
+      <article class="project-card reveal" style="--d:.1s">
+        <div class="project-preview">
+          <div class="mock mock-net">
+            <div class="mock-chart">
+              <div class="chart-header">
+                <span class="chart-label">LATENCY</span>
+                <span class="chart-value">18<small>ms</small></span>
+                <span class="chart-status">Stable</span>
+              </div>
+              <div class="chart-area">
+                <svg viewBox="0 0 300 120" preserveAspectRatio="none" class="chart-svg">
+                  <defs>
+                    <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="rgba(56, 189, 248, 0.3)"/>
+                      <stop offset="100%" stop-color="rgba(56, 189, 248, 0)"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0 100 Q 30 80, 60 85 T 120 70 T 180 60 T 240 50 T 300 30" fill="none" stroke="#38bdf8" stroke-width="2"/>
+                  <path d="M0 100 Q 30 80, 60 85 T 120 70 T 180 60 T 240 50 T 300 30 L 300 120 L 0 120 Z" fill="url(#chartGrad)"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-header">
+            <span class="project-number">02 / NEXORA LABS</span>
+            <span class="status status-done">Completed</span>
+          </div>
+          <h3 class="project-title">NEXORA Network Monitor</h3>
+          <p class="project-desc">
+            A Python-based experiment for monitoring network performance such as latency, packet loss, and connection quality.
+          </p>
+          <div class="tech-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">Networking</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" class="project-link">
+              View Project
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="#" class="project-icon-link" aria-label="Source Code">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.2-4-2.2-5.5-2.7M15 21v-3.6a3.1 3.1 0 0 0-.9-2.4c3-.3 5.9-1.5 5.9-6.6a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6s-1.5-.5-4.5 1.7a11.6 11.6 0 0 0-6 0C5 1.7 3.5 2.2 3.5 2.2a4.8 4.8 0 0 0-.1 3.6A5.2 5.2 0 0 0 2 9.4c0 5.1 2.9 6.3 5.9 6.6a3.1 3.1 0 0 0-.9 2.4V21"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3: NEXORA Security Center -->
+      <article class="project-card reveal" style="--d:.15s">
+        <div class="project-preview">
+          <div class="mock mock-security">
+            <div class="sec-header">
+              <span class="sec-dot"></span>
+              <span class="sec-title">Security Incidents</span>
+            </div>
+            <div class="sec-body">
+              <div class="sec-row"><span class="sec-tag">INFO</span><span class="sec-desc">Login attempt from 192.168.1.45</span></div>
+              <div class="sec-row"><span class="sec-tag sec-warn">WARN</span><span class="sec-desc">Port scan detected on subnet 10.0.0.0/24</span></div>
+              <div class="sec-row"><span class="sec-tag sec-error">ERROR</span><span class="sec-desc">Unauthorized access blocked</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-header">
+            <span class="project-number">03 / NEXORA LABS</span>
+            <span class="status status-exp">Experimental</span>
+          </div>
+          <h3 class="project-title">NEXORA Security Center</h3>
+          <p class="project-desc">
+            A cybersecurity experiment for collecting and analyzing simulated security incidents.
+          </p>
+          <div class="tech-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">REST API</span>
+            <span class="tag">Security Analysis</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" class="project-link">
+              View Project
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+            <a href="#" class="project-icon-link" aria-label="Source Code">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.2-4-2.2-5.5-2.7M15 21v-3.6a3.1 3.1 0 0 0-.9-2.4c3-.3 5.9-1.5 5.9-6.6a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6s-1.5-.5-4.5 1.7a11.6 11.6 0 0 0-6 0C5 1.7 3.5 2.2 3.5 2.2a4.8 4.8 0 0 0-.1 3.6A5.2 5.2 0 0 0 2 9.4c0 5.1 2.9 6.3 5.9 6.6a3.1 3.1 0 0 0-.9 2.4V21"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 4: EXCEL Technology Program -->
+      <article class="project-card reveal" style="--d:.2s">
+        <div class="project-preview">
+          <div class="mock mock-school">
+            <div class="school-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V6a1 1 0 0 1 1-1h11l4 4v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Z"/><path d="M8 12h8"/><path d="M8 16h5"/></svg>
+            </div>
+            <p class="school-text">EXCEL Technology Program</p>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-header">
+            <span class="project-number">04 / SCHOOL</span>
+            <span class="status status-school">School Project</span>
+          </div>
+          <h3 class="project-title">EXCEL Technology Program</h3>
+          <p class="project-desc">
+            Technology-related extracurricular activities and school technology programs.
+          </p>
+          <div class="tech-tags">
+            <span class="tag">School</span>
+            <span class="tag">Extracurricular</span>
+            <span class="tag">Technology</span>
+          </div>
+          <div class="project-actions">
+            <a href="#" class="project-link">
+              Learn More
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ LEARNING JOURNEY ============ -->
+  <section class="section" id="journey">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">04 — Journey</span>
+        <h2 class="section-title">My Learning Journey</h2>
+        <p class="section-sub">
+          No job titles, no clients — just the steps I've taken so far as a student.
+        </p>
+      </div>
+
+      <div class="timeline">
+        
+        <div class="tl-item reveal">
+          <div class="tl-year">2023</div>
+          <div class="tl-track">
+            <div class="tl-node"></div>
+          </div>
+          <div class="tl-content">
+            <span class="tl-label">THE BEGINNING</span>
+            <h3>Started learning programming</h3>
+            <p>Discovered Python and the basics of how software is built.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal" style="--d:.05s">
+          <div class="tl-year">2024</div>
+          <div class="tl-track">
+            <div class="tl-node"></div>
+          </div>
+          <div class="tl-content">
+            <span class="tl-label">FIRST REAL BUILD</span>
+            <h3>Built my first chatbot</h3>
+            <p>Connected a simple interface with logic.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal" style="--d:.1s">
+          <div class="tl-year">2024</div>
+          <div class="tl-track">
+            <div class="tl-node"></div>
+          </div>
+          <div class="tl-content">
+            <span class="tl-label">GOING DEEPER</span>
+            <h3>Explored computer networking</h3>
+            <p>Learned about protocols, latency, packets, and network tools.</p>
+          </div>
+        </div>
+
+        <div class="tl-item reveal" style="--d:.15s">
+          <div class="tl-year">2025</div>
+          <div class="tl-track">
+            <div class="tl-node"></div>
+          </div>
+          <div class="tl-content">
+            <span class="tl-label">NEW TERRITORY</span>
+            <h3>Experimented with cybersecurity</h3>
+            <p>Practiced analyzing simulated incidents in safe environments.</p>
+          </div>
+        </div>
+
+        <div class="tl-item tl-item-active reveal" style="--d:.2s">
+          <div class="tl-year">NOW</div>
+          <div class="tl-track">
+            <div class="tl-node tl-node-active"></div>
+          </div>
+          <div class="tl-content">
+            <span class="tl-label">BUILDING IN PUBLIC</span>
+            <h3>Creating the NEXORA projects</h3>
+            <p>Combining code, networks, security, and AI into practical builds.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TECH STACK ============ -->
+  <section class="section" id="stack">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">05 — Tech Stack</span>
+        <h2 class="section-title">Tools I use</h2>
+        <p class="section-sub">The everyday tools behind everything above.</p>
+      </div>
+
+      <div class="stack-grid">
+        <div class="stack-item reveal" style="--d:.02s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 7 4 12 9 17"/><polyline points="15 7 20 12 15 17"/></svg>
+          <span>HTML</span>
+        </div>
+        <div class="stack-item reveal" style="--d:.04s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.4 6 10.4a6 6 0 0 1-12 0C6 9.4 12 3 12 3Z"/></svg>
+          <span>CSS</span>
+        </div>
+        <div class="stack-item reveal" style="--d:.06s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z"/></svg>
+          <span>JavaScript</span>
+        </div>
+        <div class="stack-item reveal" style="--d:.08s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8c0-2 1.6-3 3.6-3h8.8c2 0 3.6 1 3.6 3s-1.6 3-3.6 3H7.6C5.6 11 4 12 4 14s1.6 3 3.6 3h8.8c2 0 3.6-1 3.6-3"/></svg>
+          <span>Python</span>
+        </div>
+        <div class="stack-item reveal" style="--d:.1s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5 20.5 7.5v9L12 21.5 3.5 16.5v-9z"/></svg>
+          <span>Node.js</span>
+        </div>
+        <div class="stack-item reveal" style="--d:.12s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><circle cx="18" cy="9" r="2.4"/><path d="M6 8.4v7.2"/><path d="M18 11.4c0 3.2-3.2 3.6-6 3.6H9"/></svg>
+          <span>Git</span>
+        </div>
+        <div class="stack-item reveal" style="--d:.14s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3 8.5 12 17 21"/><path d="M8.5 12 4 8v8l4.5-4Z"/></svg>
+          <span>VS Code</span>
+        </div>
+        <div class="stack-item reveal" style="--d:.16s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h12l-3.2-3.2"/><path d="M20 16H8l3.2 3.2"/></svg>
+          <span>REST API</span>
+        </div>
+        <div class="stack-item reveal" style="--d:.18s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2.2"/><circle cx="5" cy="18" r="2.2"/><circle cx="19" cy="18" r="2.2"/><path d="M12 7.2 6.6 15.8"/><path d="M12 7.2l5.4 8.6"/><path d="M7.2 18h9.6"/></svg>
+          <span>Networking</span>
+        </div>
+        <div class="stack-item reveal" style="--d:.2s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M12 3v4M12 17v4M3 12h4M17 12h4"/></svg>
+          <span>AI</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-wrap reveal">
+        <div class="contact-head">
+          <span class="eyebrow">06 — Contact</span>
+          <h2 class="section-title">Let's Build Something.</h2>
+          <p class="section-sub">
+            Have a project idea, collaboration opportunity, or just want to talk about technology?
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:zannguy@gmail.com">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">Email</span>
+              <span class="contact-value">zannguy@gmail.com</span>
+            </div>
+          </a>
+
+          <a class="contact-card" href="#" target="_blank" rel="noopener">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4 1.2-4-2.2-5.5-2.7M15 21v-3.6a3.1 3.1 0 0 0-.9-2.4c3-.3 5.9-1.5 5.9-6.6a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6s-1.5-.5-4.5 1.7a11.6 11.6 0 0 0-6 0C5 1.7 3.5 2.2 3.5 2.2a4.8 4.8 0 0 0-.1 3.6A5.2 5.2 0 0 0 2 9.4c0 5.1 2.9 6.3 5.9 6.6a3.1 3.1 0 0 0-.9 2.4V21"/></svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">github.com/your-username</span>
+            </div>
+          </a>
+
+          <a class="contact-card" href="#" target="_blank" rel="noopener">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">Instagram</span>
+              <span class="contact-value">@sanhtavel</span>
+            </div>
+          </a>
+
+          <a class="contact-card" href="#" target="_blank" rel="noopener">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5V17"/><circle cx="7.5" cy="7.2" r="1.1"/><path d="M11.5 17v-3.6a2.6 2.6 0 0 1 5.2 0V17"/><path d="M11.5 10.5V17"/></svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">linkedin.com/in/your-username</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="#home" class="logo">
+        <span class="logo-mark">ZN</span>
+        <span class="logo-text">Zan<span class="logo-dot">.</span></span>
+      </a>
+      <p class="footer-tagline">Learning Technology, Building Real Projects.</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="footer-bottom">
+      <span>© <span id="year">2025</span> Fauzan Naufal Satria — Indonesia</span>
+      <span class="footer-built">Built with HTML, CSS &amp; JavaScript</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
