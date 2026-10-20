@@ -1607,3 +1607,11 @@ button { font: inherit; color: inherit; }
   .reveal { opacity: 1; transform: none; }
   #bg-canvas { display: none; }
 }
+
+/* Styling untuk logo baru di navbar & footer */
+.logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 6px;
+}
